@@ -38,6 +38,8 @@ python3 run_extreme_parkour.py --logdir traced --mode parkour --nodryrun
 This script fuses the depth image and proprioception data. Now the robot is in the sport mode:
 - Press **R1** to stand up.
 - Press **R2** to lie down.
+- Press **X** to balance stand.
+- Press **A** to perform a hello gesture (你好).
 - Press **L1** to disable the builtin sport service and execute the stand policy.
 - After turning off the builtin sport service, press **Y** to start executing the parkour policy.
 - When finished, press **L2** to exit the parkour mode and re-enable native motion control.

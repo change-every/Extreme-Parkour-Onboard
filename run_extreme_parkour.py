@@ -99,8 +99,12 @@ class Go2Node(UnitreeRos2Real):
                 self.get_logger().info("In the sport mode, X pressed, robot will balance stand.")
                 self._sport_mode_change(ROBOT_SPORT_API_ID_BALANCESTAND)
 
+            if (self.joy_stick_buffer.keys & self.WirelessButtons.A):
+                self.get_logger().info("In the sport mode, A pressed, robot will perform hello gesture.")
+                self._sport_mode_change(ROBOT_SPORT_API_ID_HELLO)
+
             if (self.joy_stick_buffer.keys & self.WirelessButtons.L1):
-                self.get_logger().info("Exist the sport mode. Switch to stand policy.")
+                self.get_logger().info("Exit the sport mode. Switch to stand policy.")
                 self.use_sport_mode = False
                 self._sport_state_change(0)
                 self.use_stand_policy = True
